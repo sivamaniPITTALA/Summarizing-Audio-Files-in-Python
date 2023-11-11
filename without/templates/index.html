@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Summarizer</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Add a blinking effect */
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* Style the microphone button when listening */
+        #start_mic.listening {
+            animation: blink 1s infinite; /* Apply the blinking effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Audio Summarizer</h1>
+        <!-- Form for uploading a video file -->
+        <form action="/summarize_file_audio" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="video_upload">
+                    <i class="fas fa-upload"></i> Upload Video:
+                </label>
+                <input type="file" name="video_upload" id="video_upload" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">
+                Summarize Video
+            </button>
+        </form>
+        <br>
+        <!-- Form for summarizing a YouTube video -->
+        <form action="/summarize_video_audio" method="POST">
+            <div class="form-group">
+                <label for="youtube_url">
+                    <i class="fab fa-youtube"></i> YouTube Video URL:
+                </label>
+                <input type="text" name="youtube_url" id="youtube_url" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">
+                Summarize YouTube Video
+            </button>
+        </form>        
+        <br>
+        <!-- Form for summarizing microphone audio -->
+        <form action="/summarize_microphone_audio" method="POST">
+            <button type="submit" id="start_mic" class="btn btn-primary">
+                <i class="fas fa-microphone"></i> Summarize Microphone Audio
+            </button>
+        </form>
+        <!-- Result container -->
+        <div class="result">
+            <h3>Summary:</h3>
+            <p>{{ result }}</p>
+        </div>
+    </div>
+</body>
+</html>

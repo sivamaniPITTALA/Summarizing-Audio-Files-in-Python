@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Summarization</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css
+    /all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdbootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Video Summarization</h1>
+    
+    <!-- Form to upload a video file -->
+    <form action="/upload_video" method="POST" enctype="multipart/form-data">
+        <label for="video_file">Upload a video file:</label>
+        <input type="file" name="video_file" accept=".mp4">
+        <button type="submit">Summarize Video</button>
+    </form>
+
+    <!-- Form to enter a video link -->
+    <form action="/summarize_video_link" method="POST">
+        <label for="video_link">Enter a video link:</label>
+        <input type="text" name="video_link">
+        <button type="submit">Summarize Video Link</button>
+    </form>
+
+    <!-- Speech input and microphone button -->
+    <div>
+        <label for="speech_input">Speech Input:</label>
+        <input type="text" id="speech_input" name="speech_input" readonly>
+        <button type="button" id="start_mic">Start Microphone</button>
+    </div>
+
+    <!-- Button to summarize and convert to audio -->
+    <form action="/summarize_and_convert_audio" method="POST">
+        <button type="submit">Summarize and Convert to Audio</button>
+    </form>
+</body>
+</html>

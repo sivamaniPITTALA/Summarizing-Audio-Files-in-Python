@@ -1,0 +1,1 @@
+Recognition request failed: recognition request failed: Bad Request
