@@ -13,7 +13,7 @@ This repository contains a Python application that allows users to summarize aud
 Ensure you have the following installed on your system:
 
 - [Python](https://www.python.org/downloads/): The programming language used for this project.
--  [Flask](https://pypi.org/project/Flask/): A web framework for building the application.
+- [Flask](https://pypi.org/project/Flask/): A web framework for building the application.
 - [Summarizer](https://pypi.org/project/summarizer/): A library for text summarization.
 - [youtube_dl](https://pypi.org/project/youtube_dl/): A library for downloading YouTube videos.
 - [MoviePy](https://pypi.org/project/moviepy/): A library for video editing.
@@ -65,7 +65,7 @@ pip install Flask summarizer youtube_dl moviepy SpeechRecognition pytube PyAudio
     This project is licensed under the MIT License - see the LICENSE file for details.
 
 8. **Acknowledgments:**
-    Thanks to **S. Naga Raju**, Associate Professor in the Department of Computer Science & Engineering, for providing valuable information and clearing doubts.
+    Thanks to **[S. Naga Raju](https://www.kitsw.ac.in/departments/CSE/Faculty_profiles/S.Nagaraju.html)**, Associate Professor in the Department of Computer Science & Engineering, for providing valuable information and clearing doubts.
 
     Thanks to the creators of the libraries and tools used in this project.
 
