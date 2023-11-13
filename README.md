@@ -36,33 +36,40 @@ pip install Flask summarizer youtube_dl moviepy SpeechRecognition pytube PyAudio
 
 ## Usage
 
-### Clone the repository:
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/sivamaniPITTALA/Summarizing-Audio-Files-in-Python.git
+    cd Summarizing-Audio-Files-in-Python
+    ```
 
-```bash
-git clone https://github.com/sivamaniPITTALA/Summarizing-Audio-Files-in-Python.git
-cd Summarizing-Audio-Files-in-Python
-```
-### Run the application:
-```bash
-python app.py
-```
-**Open your web browser and navigate to http://localhost:5000 to access the web interface.**
+2. **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-## Configuration
-Adjust configuration parameters in app.py if needed.
+3. **Run the application:**
+    ```bash
+    python app.py
+    ```
 
-## Contributing
-Contributions are welcome! If you find a bug or have a suggestion, please open an issue. Pull requests are encouraged.
+4. **Access the web interface:**
+    Open your web browser and navigate to [http://localhost:5000](http://localhost:5000).
 
-## License
+5. **Configuration:**
+    Adjust configuration parameters in `app.py` if needed.
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+6. **Contributing:**
+    Contributions are welcome! If you find a bug or have a suggestion, please open an issue. Pull requests are encouraged.
 
-## Acknowledgments
+7. **License:**
+    This project is licensed under the MIT License - see the LICENSE file for details.
+
+8. **Acknowledgments:**
+    Thanks to **S. Naga Raju**, Associate Professor in the Department of Computer Science & Engineering, for providing valuable information and clearing doubts.
+
+    Thanks to the creators of the libraries and tools used in this project.
 
 
-Thanks to the creators of the libraries and tools used in this project.
 
-Thanks to **S. Naga Raju**, Associate Professor in the Department of Computer Science & Engineering, for providing valuable information and clearing doubts.
 
 
