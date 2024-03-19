@@ -301,7 +301,7 @@ def summarize_file_audio():
 
         # Process the uploaded video file
         if video_file_path:
-            data_folder = "C:\\Users\\Sivamani\\Desktop\\Summarizing Audio Files in Python\\without\\uploads"
+            data_folder = "without\\uploads"
             
             if not os.path.exists(data_folder):
                 os.makedirs(data_folder)
