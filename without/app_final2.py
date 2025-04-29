@@ -296,7 +296,11 @@ def summarize_file_audio():
 
     if uploaded_file:
         # Save the uploaded file to the "uploads" folder
-        video_file_path = os.path.join(app.config['UPLOAD_FOLDER'], uploaded_file.filename) # type: ignore
+        from werkzeug.utils import secure_filename
+        sanitized_filename = secure_filename(uploaded_file.filename)
+        video_file_path = os.path.normpath(os.path.join(app.config['UPLOAD_FOLDER'], sanitized_filename))
+        if not video_file_path.startswith(os.path.abspath(app.config['UPLOAD_FOLDER'])):
+            return "Invalid file path."
         uploaded_file.save(video_file_path)
 
         # Process the uploaded video file
